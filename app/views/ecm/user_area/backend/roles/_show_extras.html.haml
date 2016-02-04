@@ -1,0 +1,15 @@
+.panel.panel-default
+  .panel-heading
+    .panel-title= User.model_name.human(count: :other)
+  %table.table.table-striped.table-condensed.table-hover
+    = table_for(@resource.users, class: User, presenter: BootstrapTablePresenter) do |table, record|
+      = table.column :email
+  .panel-footer
+
+.panel.panel-default
+  .panel-heading
+    .panel-title= Ecm::UserArea::Permission.model_name.human(count: :other)
+  %table.table.table-striped.table-condensed.table-hover
+    = table_for(@resource.permissions, class: Ecm::UserArea::Permission, presenter: BootstrapTablePresenter) do |table, record|
+      = table.column :identifier
+  .panel-footer

@@ -1,5 +1,5 @@
 = table.column :id
 = table.column :email
-= table.column :sign_in_count
-= table.column(:last_sign_in_at) { |user| I18n.l(user.last_sign_in_at, format: :short) if user.last_sign_in_at.present? }
-= table.column_timestamps
+/ = table.column :sign_in_count
+/ = table.column(:last_sign_in_at) { |user| I18n.l(user.last_sign_in_at, format: :short) if user.last_sign_in_at.present? }
+= table.timestamps

@@ -1,4 +1,10 @@
 .well
   = form.input :email
-  = form.input :password
-  = form.input :password_confirmation
+  /= form.input :password
+  /= form.input :password_confirmation
+
+.well
+  = form.association :roles, as: :check_boxes, label_method: :identifier
+
+.well
+  = form.association :permissions, as: :check_boxes, label_method: :identifier

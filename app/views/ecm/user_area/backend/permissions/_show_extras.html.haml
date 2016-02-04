@@ -1,0 +1,15 @@
+.panel.panel-default
+  .panel-heading
+    .panel-title= Ecm::UserArea::Role.model_name.human(count: :other)
+  %table.table.table-striped.table-condensed.table-hover
+    = render_collection(@resource.roles, Ecm::UserArea::Role, as: :bootstrap_table) do |table|
+      = table.column :identifier
+  .panel-footer
+
+.panel.panel-default
+  .panel-heading
+    .panel-title= User.model_name.human(count: :other)
+  %table.table.table-striped.table-condensed.table-hover
+    = render_collection(@resource.users, User, as: :bootstrap_table) do |table|
+      = table.column :email
+  .panel-footer
