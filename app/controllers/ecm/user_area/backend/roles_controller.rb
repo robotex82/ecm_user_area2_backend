@@ -1,4 +1,4 @@
-class Ecm::UserArea::Backend::RolesController < Itsf::Backend::BaseController
+class Ecm::UserArea::Backend::RolesController < Itsf::Backend::Resource::BaseController
   def self.resource_class
     # Set the resource class here.
     #
