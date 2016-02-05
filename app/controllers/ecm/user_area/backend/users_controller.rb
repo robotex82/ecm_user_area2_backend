@@ -1,10 +1,10 @@
-class Ecm::UserArea::Backend::UsersController < Itsf::Backend::BaseController
+class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseController
   def self.resource_class
     # Set the resource class here.
     #
     # Default: Ecm::UserArea::User
     #
-    ::User
+    Ecm::UserArea::User
   end
 
   private

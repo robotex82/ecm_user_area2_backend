@@ -1,5 +1,6 @@
 de:
-  ecm_user_area_backend: Rechte
+  classes:
+    ecm/user_area/backend/engine: Rechte
   activerecord:
     scopes:
       never_signed_in: Niemals angemeldet
