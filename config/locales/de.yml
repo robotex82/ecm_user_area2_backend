@@ -1,9 +1,8 @@
 de:
   classes:
-    ecm/user_area/backend/engine: 'Rechte'
-  activerecord:
+    ecm/user_area/backend/engine: Authentifizierung
     scopes:
       never_signed_in: Niemals angemeldet
   routes:
     mount:
-      ecm_user_area_backend: '/backend/rechte'
+      ecm_user_area_backend: '/backend/authentifizierung'

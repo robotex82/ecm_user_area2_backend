@@ -18,6 +18,6 @@ class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseCon
     # 
     params
       .require(:user)
-        .permit(:email, role_ids: [])
+        .permit(:email, :password, :password_confirmation, :active, :confirmed, :approved, role_ids: [])
   end
 end
