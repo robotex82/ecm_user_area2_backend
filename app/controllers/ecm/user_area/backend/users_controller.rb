@@ -7,6 +7,14 @@ class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseCon
     Ecm::UserArea::User
   end
 
+  def autocomplete
+    @collection = collection_scope.autocomplete(params[:term])
+
+    respond_to do |format|
+      format.json { render json: @collection.map { |q| q.as_json(style: :autocomplete) } }
+    end
+  end
+
   private
 
   def collection_scope

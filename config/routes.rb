@@ -4,7 +4,9 @@ Ecm::UserArea::Backend::Engine.routes.draw do
     post :call,   on: :collection
   end
   
-  resources :users
-
+  resources :users do
+    get :autocomplete, on: :collection
+  end
+  
   root to: 'home#index'
 end
