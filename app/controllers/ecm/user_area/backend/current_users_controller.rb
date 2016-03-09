@@ -14,7 +14,7 @@ module Ecm
         private
 
         def permitted_params
-          params.require(:user_pin).permit(:user_id, :pin, :pin_confirmation)
+          params.require(:user).permit()
         end
       end
     end
