@@ -37,6 +37,6 @@ class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseCon
     # 
     params
       .require(:user)
-        .permit(:email, :password, :password_confirmation)
+        .permit(:email, :password, :password_confirmation, :active, :confirmed, :approved)
   end
 end
