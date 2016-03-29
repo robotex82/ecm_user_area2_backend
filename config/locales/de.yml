@@ -6,4 +6,4 @@ de:
       never_signed_in: Niemals angemeldet
   routes:
     mount:
-      ecm_user_area_backend: '/backend/authentifizierung'
+      ecm_user_area_backend: '/backend/authentication'
