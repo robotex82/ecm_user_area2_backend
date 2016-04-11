@@ -16,18 +16,7 @@ class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseCon
   end
 
   private
-
-  def collection_scope
-    # Customize the collection scope here for collection retrival (i.e. for the
-    # index action).
-    #
-    # Example: current_user.posts.includes(:comments)
-    #
-    # Default: resource_class
-    #
-    resource_class
-  end
-
+  
   def permitted_params
     # Set the allowed params, for your create and update methods.
     # 
