@@ -4,7 +4,7 @@ Ecm::UserArea::Backend::Engine.routes.draw do
     post :call,   on: :collection
   end
   
-  resources :users do
+  backend_resources :users do
     get :autocomplete, on: :collection
   end
 
