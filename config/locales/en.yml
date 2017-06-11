@@ -5,5 +5,4 @@ en:
     scopes:
       never_signed_in: Never signed in
   routes:
-    mount:
-      ecm_user_area_backend: '/backend/authentication'
+    ecm-user-area-backend-engine: 'authentication'
