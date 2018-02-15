@@ -1,4 +1,4 @@
 
   localized do
-    mount Ecm::UserArea::Backend::Engine => '/backend/ecm/user_area'
+    mount Ecm::UserArea::Backend::Engine, at: '/backend/ecm/user_area'
   end
