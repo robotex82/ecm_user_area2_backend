@@ -5,4 +5,4 @@ de:
     scopes:
       never_signed_in: Niemals angemeldet
   routes:
-    ecm-user-area-backend-engine: 'authentication'
+    ecm-user-area-backend-engine: 'authentifizierung'
