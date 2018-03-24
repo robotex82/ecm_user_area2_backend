@@ -1,31 +1,29 @@
-class Ecm::UserArea::Backend::UsersController < Itsf::Backend::Resource::BaseController
-  def self.resource_class
-    # Set the resource class here.
-    #
-    # Default: Ecm::UserArea::User
-    #
-    Ecm::UserArea::User
-  end
+module Ecm
+  module UserArea
+    module Backend
+      class UsersController < Itsf::Backend::Resource::BaseController
+        include ResourcesController::Sorting
 
-  def autocomplete
-    @collection = collection_scope.autocomplete(params[:term])
+        def self.resource_class
+          Ecm::UserArea::User
+        end
 
-    respond_to do |format|
-      format.json { render json: @collection.map { |q| q.as_json(style: :autocomplete) } }
+        def autocomplete
+          @collection = collection_scope.autocomplete(params[:term])
+
+          respond_to do |format|
+            format.json { render json: @collection.map { |q| q.as_json(style: :autocomplete) } }
+          end
+        end
+
+        private
+        
+        def permitted_params
+          params
+            .require(:user)
+              .permit(:email, :password, :password_confirmation, :active, :confirmed, :approved)
+        end
+      end
     end
-  end
-
-  private
-  
-  def permitted_params
-    # Set the allowed params, for your create and update methods.
-    # 
-    # Example: params
-    #            .require(:ecm_user_area_user)
-    #              .permit(:title, :body)
-    # 
-    params
-      .require(:user)
-        .permit(:email, :password, :password_confirmation, :active, :confirmed, :approved)
   end
 end
